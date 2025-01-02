@@ -1,0 +1,93 @@
+{
+  "name": "Minimum configuration",
+  "image": "mcr.microsoft.com/devcontainers/base:alpine",
+  "containerEnv": {
+    "TZ": "Asia/Tokyo"
+  },
+  "runArgs": ["--init"],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // common
+        "PKief.material-icon-theme",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "EditorConfig.EditorConfig",
+        "oderwat.indent-rainbow",
+        "yzhang.markdown-all-in-one",
+        "usernamehw.errorlens",
+        "Gruntfuggly.todo-tree",
+        "MS-vsliveshare.vsliveshare",
+        // git
+        "donjayamanne.githistory",
+        "eamodio.gitlens",
+        "mhutchie.git-graph",
+        "GitHub.vscode-github-actions"
+      ],
+      "settings": {
+        // common
+        "files.encoding": "utf8",
+        "files.eol": "\n",
+        "editor.renderWhitespace": "all",
+        "workbench.iconTheme": "material-icon-theme",
+        "files.trimTrailingWhitespace": true,
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true,
+        "editor.codeActionsOnSave": {
+          "source.fixAll": "explicit",
+          "source.organizeImports": "explicit"
+        },
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        // Todo Tree config
+        "todo-tree.general.tags": [
+          "TODO",
+          "ToDo",
+          "todo",
+          "BUG",
+          "bug",
+          "FIXME",
+          "fixme",
+          "FIX",
+          "fix",
+          "NOTE",
+          "note"
+        ],
+        "todo-tree.general.tagGroups": {
+          "TODO": ["ToDo", "todo"],
+          "BUG": ["bug"],
+          "FIXME": ["fixme", "FIX", "fix"],
+          "NOTE": ["note"]
+        },
+        "todo-tree.highlights.defaultHighlight": {
+          "gutterIcon": true
+        },
+        "todo-tree.highlights.customHighlight": {
+          "TODO": {
+            "icon": "check-circle-fill",
+            "foreground": "#00ff00",
+            "iconColour": "#00ff00"
+          },
+          "BUG": {
+            "icon": "bug",
+            "foreground": "#ff0000",
+            "iconColour": "#ff0000"
+          },
+          "FIXME": {
+            "icon": "flame",
+            "foreground": "#ffff00",
+            "iconColour": "#ffff00"
+          },
+          "NOTE": {
+            "icon": "note",
+            "foreground": "#00bfff",
+            "iconColour": "#00bfff"
+          }
+        },
+        "todo-tree.filtering.excludeGlobs": [
+          "**/node_modules/*/**",
+          "README.md"
+        ]
+      }
+    }
+  }
+}
