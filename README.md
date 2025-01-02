@@ -6,7 +6,13 @@ Salesforce Settings Container
 
 ## use images
 
-- [mcr.microsoft.com/devcontainers/base:alpine](https://hub.docker.com/r/microsoft/vscode-devcontainers)
+- [salesforce/cli:latest-full](https://developer.salesforce.com/docs/atlas.ja-jp.sfdx_setup.meta/sfdx_setup/sfdx_setup_docker.htm)
+
+## postCreateCommand
+
+Auto Setup Salesforce Project
+
+- [Script](.devcontainer/script/postCreate.sh)
 
 # example Codespace
 

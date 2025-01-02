@@ -5,7 +5,7 @@
     "TZ": "Asia/Tokyo"
   },
   "runArgs": ["--init"],
-  "postCreateCommand": "./.devcontainer/postCreate.sh",
+  "postCreateCommand": "./.devcontainer/script/postCreate.sh",
   "customizations": {
     "vscode": {
       "extensions": [
