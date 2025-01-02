@@ -1,10 +1,11 @@
 {
-  "name": "Minimum configuration",
-  "image": "mcr.microsoft.com/devcontainers/base:alpine",
+  "name": "salesforce configuration",
+  "image": "salesforce/cli:latest-full",
   "containerEnv": {
     "TZ": "Asia/Tokyo"
   },
   "runArgs": ["--init"],
+  "postCreateCommand": "if [ ! -e 'sfdx-project.json' ]; then sfdx force:project:create -n $(basename `pwd`) --manifest --outputdir ../;npm i",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -22,7 +23,10 @@
         "donjayamanne.githistory",
         "eamodio.gitlens",
         "mhutchie.git-graph",
-        "GitHub.vscode-github-actions"
+        "GitHub.vscode-github-actions",
+        // salesforce
+        "salesforce.salesforcedx-vscode",
+        "financialforce.lana"
       ],
       "settings": {
         // common

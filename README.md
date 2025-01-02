@@ -1,6 +1,6 @@
-# template-minimum
+# template-Salesforce
 
-Minimum Settings Container
+Salesforce Settings Container
 
 # environment
 
