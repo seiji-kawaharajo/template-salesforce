@@ -5,7 +5,7 @@
     "TZ": "Asia/Tokyo"
   },
   "runArgs": ["--init"],
-  "postCreateCommand": "if [ ! -e 'sfdx-project.json' ]; then sfdx force:project:create -n $(basename `pwd`) --manifest --outputdir ../;npm i",
+  "postCreateCommand": "./.devcontainer/postCreate.sh",
   "customizations": {
     "vscode": {
       "extensions": [
